@@ -46,10 +46,10 @@ const register = async (req, res) => {
     // Generate unique loginID
     const loginID = generateLoginID();
 
-    const roleInfo = {
-      label: role.label,
-      value: role.value,
-    };
+    // const roleInfo = {
+    //   label: role.label,
+    //   value: role.value,
+    // };
 
     // Create the new user with timestamps
     const user = await User.create({
@@ -61,7 +61,6 @@ const register = async (req, res) => {
       plainPassword,
       phoneNumber,
       currentAddress,
-      role: roleInfo,
       loginID, // Store the generated loginID
     });
 

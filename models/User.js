@@ -42,10 +42,10 @@ const UserSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    role: {
-      type: Object, // Role is an object, storing both label and value
-      required: false,
-    },
+    // role: {
+    //   type: Object, // Role is an object, storing both label and value
+    //   required: false,
+    // },
     password: {
       type: String,
       required: true,

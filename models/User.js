@@ -4,7 +4,7 @@ const bcrypt = require("bcryptjs");
 // Function to generate unique loginID like FTB-{random4digits}
 function generateLoginID() {
   const randomDigits = Math.floor(1000 + Math.random() * 9000); // Generates a random 4-digit number
-  return `FTB-${randomDigits}`;
+  return `ZEI-${randomDigits}`;
 }
 
 const UserSchema = new mongoose.Schema(
@@ -44,7 +44,7 @@ const UserSchema = new mongoose.Schema(
     },
     role: {
       type: Object, // Role is an object, storing both label and value
-      required: true,
+      required: false,
     },
     password: {
       type: String,

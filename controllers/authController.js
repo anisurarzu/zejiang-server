@@ -5,7 +5,7 @@ require("dotenv").config();
 // Function to generate unique loginID like FTB-{random4digits}
 function generateLoginID() {
   const randomDigits = Math.floor(1000 + Math.random() * 9000); // Generates a random 4-digit number
-  return `FTB-${randomDigits}`;
+  return `ZEI-${randomDigits}`;
 }
 
 // Register a new user
@@ -33,8 +33,6 @@ const register = async (req, res) => {
     "password",
     "phoneNumber",
     "currentAddress",
-    "role",
-    "loginID",
   ];
 
   const missingFields = requiredFields.filter((field) => !req.body[field]);
@@ -46,7 +44,7 @@ const register = async (req, res) => {
 
   try {
     // Generate unique loginID
-    // const loginID = generateLoginID();
+    const loginID = generateLoginID();
 
     const roleInfo = {
       label: role.label,

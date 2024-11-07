@@ -21,17 +21,17 @@ app.use(cors());
 
 app.use("/api/auth", authRoutes);
 
-// Slider Routes
-app.use("/api", hotelCategoryRoutes); // Add slider routes under /api
+// // Slider Routes
+// app.use("/api", hotelCategoryRoutes); // Add slider routes under /api
 
-// Room Routes
-app.use("/api", roomRoutes); // Add slider routes under /api
+// // Room Routes
+// app.use("/api", roomRoutes); // Add slider routes under /api
 
-// Portfolio Routes
-app.use("/api", hotelRoutes); // Add slider routes under /api
+// // Portfolio Routes
+// app.use("/api", hotelRoutes); // Add slider routes under /api
 
-//Booking Routes
-app.use("/api", bookingRoutes);
+// //Booking Routes
+// app.use("/api", bookingRoutes);
 
 // Root Route
 app.get("/", (req, res) => {
